@@ -18,7 +18,6 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
   const router = useRouter();
   useEffect(() => {
     const queryParam = searchParams.get('query') ?? '';
-    console.log("queryParam: ", queryParam);
     if (queryParam && currentPage !== 1) {
       const params = new URLSearchParams(searchParams);
       params.set('page', '1');
